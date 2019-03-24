@@ -60,3 +60,13 @@ ELF 32-bit MSB executable, MIPS, MIPS32 rel2 version 1 (SYSV), dynamically linke
 ## cross-compilation
 
 see the compile.sh for the example
+
+## cross-compilation of mosquitto
+
+```
+cd ../mosquitto
+../microrouter-dockcross/dockcross-linux-mips make WITH_WEBSOCKETS=yes WITH_SRV=no WITH_UUID=no WITH_TLS=no WITH_DOCS=no CFLAGS="-mips32" LDFLAGS="-Wl,-dynamic-linker,/lib/ld-musl-mips-sf.so.1"
+scp ./src/mosquitto root@11.0.0.1:
+scp ../oh-algorithm-js/mosquitto.conf root@11.0.0.1:
+```
+
