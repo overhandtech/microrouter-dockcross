@@ -65,9 +65,15 @@ see the compile.sh for the example
 
 ```
 cd ../mosquitto
-../microrouter-dockcross/dockcross-linux-mips make WITH_WEBSOCKETS=yes WITH_SRV=no WITH_UUID=no WITH_TLS=no WITH_DOCS=no CFLAGS="-mips32" LDFLAGS="-Wl,-dynamic-linker,/lib/ld-musl-mips-sf.so.1"
+../microrouter-dockcross/dockcross-linux-mips make WITH_WEBSOCKETS=yes WITH_SRV=no WITH_UUID=no WITH_TLS=no WITH_DOCS=no CFLAGS="-mips32 -I../libwebsockets/include/" LDFLAGS="-Wl,-dynamic-linker,/lib/ld-musl-mips-sf.so.1 -L/work/libwebsockets/lib -lwebsockets"
 scp ./src/mosquitto root@11.0.0.1:
 scp ../oh-algorithm-js/mosquitto.conf root@11.0.0.1:
+```
+
+cleaning:
+
+```
+../microrouter-dockcross/dockcross-linux-mips make clean
 ```
 
 ...depends on:
@@ -77,7 +83,7 @@ scp ../oh-algorithm-js/mosquitto.conf root@11.0.0.1:
 without SSL:
 
 ```
-../../microrouter-dockcross/dockcross-linux-mips bash -c "cmake -DLWS_WITH_SSL=OFF -DLWS_WITH_SHARED=OFF"
+../../microrouter-dockcross/dockcross-linux-mips bash -c "cmake -DLWS_WITH_SSL=OFF -DLWS_WITH_SHARED=OFF -DLWS_HAVE_MALLOC_TRIM=OFF"
 ../../microrouter-dockcross/dockcross-linux-mips make
 ```
 
