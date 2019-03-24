@@ -70,3 +70,30 @@ scp ./src/mosquitto root@11.0.0.1:
 scp ../oh-algorithm-js/mosquitto.conf root@11.0.0.1:
 ```
 
+...depends on:
+
+## cross-compilation of Websockets
+
+without SSL:
+
+```
+../../microrouter-dockcross/dockcross-linux-mips bash -c "cmake -DLWS_WITH_SSL=OFF"
+../../microrouter-dockcross/dockcross-linux-mips make
+```
+
+with SSL (fails with some incomplete type error):
+
+
+```LWS_WITH_SSL
+../../microrouter-dockcross/dockcross-linux-mips bash -c "cmake -DOPENSSL_ROOT_DIR=/work/openssl -DOPENSSL_SSL_LIBRARY=/work/openssl/lib -DOPENSSL_CRYPTO_LIBRARY=/work/openssl/lib -DOPENSSL_INCLUDE_DIR=/work/openssl/include"```
+../../microrouter-dockcross/dockcross-linux-mips make
+```
+
+...depends on:
+
+## cross-compilation of OpenSSL
+
+``
+../../../microrouter-dockcross/dockcross-linux-mips ./Configure linux-mips32
+../../../microrouter-dockcross/dockcross-linux-mips make
+```
