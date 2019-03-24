@@ -1,6 +1,33 @@
-# cross-compiling to the GL-USB150 microrounter 
+# cross-compiling to the GL-USB150 microrouter 
+
+## using dockcross
 
 https://github.com/dockcross/dockcross 
+
+## platform info
+
+
+uname
+
+```
+root@GL-USB150:~# uname -a
+Linux GL-USB150 4.9.120 #0 Thu Aug 16 07:51:15 2018 mips GNU/Linux
+```
+
+openwrt
+
+```
+root@GL-USB150:~# cat /etc/openwrt_release 
+DISTRIB_ID='OpenWrt'
+DISTRIB_RELEASE='18.06.1'
+DISTRIB_REVISION='r7258-5eb055306f'
+DISTRIB_TARGET='ar71xx/generic'
+DISTRIB_ARCH='mips_24kc'
+DISTRIB_DESCRIPTION='OpenWrt 18.06.1 r7258-5eb055306f'
+DISTRIB_TAINTS='busybox'
+```
+
+cpuinfo
 
 ```
 root@GL-USB150:~# cat /proc/cpuinfo 
@@ -29,5 +56,7 @@ VCEI exceptions		: not available
 ```
 ELF 32-bit MSB executable, MIPS, MIPS32 rel2 version 1 (SYSV), dynamically linked, interpreter /lib/ld-musl-mips-sf.so.1
 ```
+
+## cross-compilation
 
 see the compile.sh for the example
