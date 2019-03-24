@@ -77,7 +77,7 @@ scp ../oh-algorithm-js/mosquitto.conf root@11.0.0.1:
 without SSL:
 
 ```
-../../microrouter-dockcross/dockcross-linux-mips bash -c "cmake -DLWS_WITH_SSL=OFF"
+../../microrouter-dockcross/dockcross-linux-mips bash -c "cmake -DLWS_WITH_SSL=OFF -DLWS_WITH_SHARED=OFF"
 ../../microrouter-dockcross/dockcross-linux-mips make
 ```
 
