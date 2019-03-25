@@ -1,3 +1,11 @@
+# Running mosquitto with websockets support on microrouter
+
+## Overview
+
+* we want to bridge incoming mqtt packets from trackers to browser (as a websockets)
+* mosquitto opkg does not support websockets
+* we explain how to configure, build and test mosquitto with websockets support on the microrouter
+
 ## cross-compiling to the GL-USB150 microrouter 
 
 ### using dockcross
