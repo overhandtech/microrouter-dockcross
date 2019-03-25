@@ -118,11 +118,11 @@ with SSL (fails with some incomplete type error):
 ### copy and run
 
 * install openwrt manufacturer mosquitto package (we'll use their service and user setup)
-  * ```opkg install mosquitto``
-* override the executable
-  * ```scp src/mosquitto root@11.0.0.2:/usr/sbin/mosquitto```
+  * ```opkg install mosquitto```
+* override the executable (in mosquitto, this is in src/mosquitto)
+  * ```scp mosquitto root@11.0.0.2:/usr/sbin/mosquitto```
 * override the config file
-  * ```scp mosquitto.conf root@11.0.0.2:/etc/mosquitto/mosquitto.conf
+  * ```scp mosquitto.conf root@11.0.0.2:/etc/mosquitto/mosquitto.conf```
 * reboot and test https://github.com/overhandtech/oh-algorithm-js
 
 ### setup
