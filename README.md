@@ -113,12 +113,17 @@ with SSL (fails with some incomplete type error):
 ```
 
 
-## running
+## running mosquitto on the microrouter
 
 ### copy and run
 
-* scp mosquitto to the device
-* run with config file
+* install openwrt manufacturer mosquitto package (we'll use their service and user setup)
+  * ```opkg install mosquitto``
+* override the executable
+  * ```scp src/mosquitto root@11.0.0.2:/usr/sbin/mosquitto```
+* override the config file
+  * ```scp mosquitto.conf root@11.0.0.2:/etc/mosquitto/mosquitto.conf
+* reboot and test https://github.com/overhandtech/oh-algorithm-js
 
 ### setup
 
