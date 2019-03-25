@@ -6,6 +6,10 @@
 * mosquitto opkg does not support websockets
 * we explain how to configure, build and test mosquitto with websockets support on the microrouter
 
+## diagram
+
+![diagram](https://static.swimlanes.io/f51c583b8c2d928ed03cb3b24273f0f2.png)
+
 ## running mosquitto on the microrouter
 
 ### building
