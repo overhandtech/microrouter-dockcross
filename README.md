@@ -107,7 +107,7 @@ with SSL (fails with some incomplete type error):
 
 ### cross-compilation of OpenSSL
 
-``
+```
 ../../../microrouter-dockcross/dockcross-linux-mips ./Configure linux-mips32
 ../../../microrouter-dockcross/dockcross-linux-mips make
 ```
