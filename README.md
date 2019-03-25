@@ -1,10 +1,10 @@
-# cross-compiling to the GL-USB150 microrouter 
+## cross-compiling to the GL-USB150 microrouter 
 
-## using dockcross
+### using dockcross
 
 https://github.com/dockcross/dockcross 
 
-## platform info
+### platform info
 
 
 uname
@@ -51,17 +51,17 @@ VCED exceptions		: not available
 VCEI exceptions		: not available
 ```
 
-## executable file format
+### executable file format
 
 ```
 ELF 32-bit MSB executable, MIPS, MIPS32 rel2 version 1 (SYSV), dynamically linked, interpreter /lib/ld-musl-mips-sf.so.1
 ```
 
-## cross-compilation
+### cross-compilation
 
 see the compile.sh for the example
 
-## cross-compilation of mosquitto
+### cross-compilation of mosquitto
 
 ```
 cd ../mosquitto
@@ -78,7 +78,7 @@ cleaning:
 
 ...depends on:
 
-## cross-compilation of Websockets
+### cross-compilation of Websockets
 
 without SSL:
 
@@ -97,9 +97,28 @@ with SSL (fails with some incomplete type error):
 
 ...depends on:
 
-## cross-compilation of OpenSSL
+### cross-compilation of OpenSSL
 
 ``
 ../../../microrouter-dockcross/dockcross-linux-mips ./Configure linux-mips32
 ../../../microrouter-dockcross/dockcross-linux-mips make
 ```
+
+
+## running
+
+### copy and run
+
+* scp mosquitto to the device
+* run with config file
+
+### setup
+
+trackers expect to talk to 11.0.0.2
+
+On the microrouter Admin > LAN > General Setup, change IP to 11.0.0.2:
+
+http://11.0.0.1/cgi-bin/luci/admin/network/network/lan
+
+save and apply unchecked. reboot
+
