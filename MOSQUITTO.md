@@ -35,10 +35,10 @@ see prepare-websockets.sh
 ### Step-by-step ###
 
 1. Preparing microrouter-dockcross
-    *Git clone [microrouter-dockcross](https://github.com/overhandtech/microrouter-dockcross)
-    *Access to the folder using the terminal
-    *We need to execute setup-dockcross.sh using `./setup-dockcross.sh`
-    *Open dockcross-linux-mips with a text editor and comment (using #) the following lines
+    * Git clone [microrouter-dockcross](https://github.com/overhandtech/microrouter-dockcross)
+    * Access to the folder using the terminal
+    * We need to execute setup-dockcross.sh using `./setup-dockcross.sh`
+    * Open dockcross-linux-mips with a text editor and comment (using #) the following lines
 ~~~~
 # Mount Additional Volumes
 #if [ -z "$SSH_DIR" ]; then
@@ -51,13 +51,13 @@ see prepare-websockets.sh
 #fi
 ~~~~
 2. Preparing libwebsockets
-    *Go to the parent folder (../) and clone [libwebsockets](https://github.com/warmcat/libwebsockets)
-    *Access to the libwebsockets folder and copy prepare-libwebsockets.sh there `cp ../microrouter-dockcross/prepare-libwebsockets.sh ./`
-    *Execute prepare-libwebsockets.sh: `./prepare-libwebsockets.sh`
+    * Go to the parent folder (../) and clone [libwebsockets](https://github.com/warmcat/libwebsockets)
+    * Access to the libwebsockets folder and copy prepare-libwebsockets.sh there `cp ../microrouter-dockcross/prepare-libwebsockets.sh ./`
+    * Execute prepare-libwebsockets.sh: `./prepare-libwebsockets.sh`
 3. Preparing mosquitto
-    *Go to the parent folder (../) and clone [mosquitto](https://github.com/eclipse/mosquitto)
-    *Access to the mosquitto folder and copy prepare-mosquitto.sh there `cp ../microrouter-dockcross/prepare-mosquitto.sh ./`
-    *Execute prepare-mosquitto.sh: `./prepare-mosquitto.sh`
+    * Go to the parent folder (../) and clone [mosquitto](https://github.com/eclipse/mosquitto)
+    * Access to the mosquitto folder and copy prepare-mosquitto.sh there `cp ../microrouter-dockcross/prepare-mosquitto.sh ./`
+    * Execute prepare-mosquitto.sh: `./prepare-mosquitto.sh`
 
 
 ### Output ###
