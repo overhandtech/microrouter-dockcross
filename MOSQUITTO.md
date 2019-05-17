@@ -30,7 +30,7 @@ see prepare-websockets.sh
 ### Requirements ###
 * [microrouter-dockcross](https://github.com/overhandtech/microrouter-dockcross)
 * [mosquitto](https://github.com/eclipse/mosquitto)
-* [libwebsockets] (https://github.com/warmcat/libwebsockets)
+* [libwebsockets](https://github.com/warmcat/libwebsockets)
 
 ### Step-by-step ###
 
