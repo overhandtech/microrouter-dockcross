@@ -25,7 +25,7 @@ see prepare-websockets.sh
 ../../../microrouter-dockcross/dockcross-linux-mips make
 ```
 
-### How to compile mosquitto from scratch using microrouter-dockcross ###
+## How to compile mosquitto from scratch using microrouter-dockcross ##
 
 ### Requirements ###
 * [microrouter-dockcross](https://github.com/overhandtech/microrouter-dockcross)
